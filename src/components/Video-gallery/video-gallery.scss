@@ -1,0 +1,45 @@
+@use '../../styles/partials/mixins'as *;
+@use '../../styles/partials/variables'as *;
+
+.video-header {
+    color: $silver;
+    font-size: 0.9rem;
+    margin: 1rem;
+    font-weight: bold;
+}
+.video-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    @include tablet {
+        margin: 1rem 2rem 1rem 2rem;
+    }
+    @include desktop {
+        margin: 1rem 3rem 1rem 3rem;
+    }
+    &__thumbnail {
+        width: 35%;
+        height: 7rem; 
+        border-radius: 4px;
+        background-color: $mercury;
+    }
+    &__aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 55%;
+        height: 7rem;
+        &--title {
+            margin: 0;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        &--author {
+            margin: 0;
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+     }
+}
+
