@@ -1,11 +1,38 @@
-
+@use '../../styles/partials/mixins'as *;
+@use '../../styles/partials/variables'as *;
 .header {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  margin: 1rem;
+  @include tablet {
+    flex-direction: row;
+    // width: 100%;
+    margin: 1rem 2rem 1rem 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  @include desktop {
+    margin: 1rem 3rem 1rem 3rem;
+    justify-content: flex-end;
+  }
+  
   &__logo {
-    height: 2rem;
+    height: 1.5rem;
     padding-bottom: 1rem;
+    @include tablet {
+      padding-bottom: 0;
+    }
+    @include desktop {
+      position: fixed;
+      left: 3rem;
+    }
+  }
+  &__avatar-button-big {
+    @include tablet {
+      width: 30%;
+      display: flex;
+      justify-content: space-between;
+    }
   }
   &__search {
     padding-bottom: 1rem;
@@ -13,25 +40,43 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    @include tablet {
+      padding-bottom: 0;
+      width: 40%;
+      margin-left: 6rem;
+    }
     &--input {
       height: 40px;
       width: 80%;
       border-radius: 4px;
-      border: none;
+      border: 1px solid #E1E1E1;
       font-family: "avenir";
       padding-left: 3rem;
+      background-color: #FAFAFA;
     }
     &--avatar {
       border-radius: 50%;
-      height: 40px;
-      width: 40px;
+      height: 36px;
+      width: 36px;
+      @include tablet {
+        display: none;
+      }
+    }
+    &--avatar-big {
+      display: none;
+      border-radius: 50%;
+      height: 36px;
+      width: 36px;
+      @include tablet {
+        display: flex;
+      } 
     }
     &--input-container {
       position: relative;
       width: 100%;
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: center;      
     }
     &--magnifier {
       position: absolute;
@@ -40,7 +85,7 @@
     }
   }
   &__button {
-    background-color: #0095ff;
+    background-color: $brainflix-blue;
     color: white;
     border-radius: 4px;
     display: flex;
@@ -49,6 +94,11 @@
     height: 40px;
     border: none;
     font-family: "avenir";
+    font-size: 1rem;
+    width: 100%;
+    @include tablet {
+      width: 75%;
+    }
   }
 }
 
