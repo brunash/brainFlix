@@ -6,9 +6,12 @@ import './video.scss';
 
 const Video = () => {
     return (
+    
         <video>
-            
+ 
         </video>
+                
+                       
     ) 
 }
 
