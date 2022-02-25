@@ -6,6 +6,12 @@
     font-size: 0.9rem;
     margin: 1rem;
     font-weight: bold;
+    @include tablet {
+        margin-left: 2rem;
+    }
+    @include desktop {
+        margin-left: 3rem;
+    }
 }
 .video-list {
     display: flex;
@@ -19,12 +25,13 @@
         margin: 1rem 3rem 1rem 3rem;
     }
     &__thumbnail {
-        width: 35%;
+        width: 15rem;
         height: 7rem; 
         border-radius: 4px;
         background-color: $mercury;
     }
     &__aside {
+        padding-left: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
