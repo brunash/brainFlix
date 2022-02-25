@@ -5,3 +5,8 @@
 html {
     font-family: "avenir";
 }
+hr {
+        border: 1px solid $mercury;
+        margin: 1rem;
+        padding: 0;
+}

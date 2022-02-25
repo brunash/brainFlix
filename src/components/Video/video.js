@@ -13,12 +13,20 @@ const Video = ({VideoDetails, selected}) => {
                         <video poster={item.image} controls className="video__hero">
                             <source src=""/>
                         </video>
-                        <h1>{item.title}</h1>
-                        <h3>{item.channel}</h3>
-                        <p>{item.timestamp}</p>
-                        <p><img src={viewsLogo}/>{item.views}</p>
-                        <p><img src={likesLogo}/>{item.likes}</p>
-                        <p>{item.description}</p>
+                        <h1 className="video__title">{item.title}</h1>
+                        <hr></hr>
+                        <div className="video__info">   
+                            <div className="video__info--left">
+                                <h3 className="video__info--channel">By {item.channel}</h3>
+                                <p className="video__info--date">{item.timestamp}</p>
+                            </div>
+                            <div className="video__info--right">
+                                <p className="video__info--views"><img src={viewsLogo} className="video__info--logo"/>{item.views}</p>
+                                <p className="video__info--likes"><img src={likesLogo} className="video__info--logo"/>{item.likes}</p>
+                            </div>
+                        </div>
+                        <hr></hr>
+                        <p className="video__description">{item.description}</p>
                         <div>
                             <form>
                             <label>JOIN THE CONVERSATION</label>
