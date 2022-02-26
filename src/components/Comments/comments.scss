@@ -1,2 +1,58 @@
 @use '../../styles/partials/mixins'as *;
 @use '../../styles/partials/variables'as *;
+
+.comments {
+    margin: 1rem;
+    
+    &__form {
+        border-bottom: 2px solid $mercury;
+        display: flex;
+        justify-content: space-between;
+        &--logo {
+            height: 2.5em;
+            width: 3rem;
+            border-radius: 50%;
+        }
+        &--wrap {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 2px solid $mercury;
+        
+        &--circle {
+            height: 2.5em;
+            width: 3rem;
+            border-radius: 50%;
+            margin: 1rem 1.5rem 0 0;
+            background-color: $mercury;
+        }
+        &--top {
+            display: flex;
+            justify-content: space-between;
+        }
+        &--right {
+            width: 85%;
+        }
+        &--date {
+            color: $silver;
+            font-size: 0.9rem;
+        }
+        &--comment {
+            font-weight: 400;
+        }
+        &--name {
+            font-weight: 600;
+        }
+    }
+    
+}
+
+// .comments__form {
+//     border-bottom: 2px solid $mercury;
+// }

@@ -13,9 +13,6 @@ videoList.shift();
 
 class App extends Component {
 
-  // const [ selected, setSelected ] = useState(VideoDetails[0].title)
-  // console.log(selected)
-
     state = {
       videoSuggest: videoList,
       chosenVideo: VideoDetails[0],
