@@ -1,20 +1,22 @@
 import React from "react";
 import './comments.scss';
 import Mohan from '../../assets/images/Mohan-muruge.jpg'
+import CommentLogo from '../../assets/images/add_comment.svg'
 
 const Comments = (props) => {
      const {comments} = props.chosenVideo;
      console.log(comments)
-
      return (
         <div className="comments">
-                <p>{comments.length} Comments</p>
+                <p className="comments__count">{comments.length} Comments</p>
                 <div className="comments__form">
                     <img src={Mohan} className="comments__form--logo"></img>
                     <form className="comments__form--wrap">
-                        <label>JOIN THE CONVERSATION</label>
-                        <textarea placeholder="Add a new comment"></textarea>
-                        <button>Comment</button>
+                       <div className="comments__form--input-wrap-big">
+                        <label className="comments__form--label" for="input">JOIN THE CONVERSATION</label>
+                        <textarea placeholder="Add a new comment" className="comments__form--input" name="input"></textarea>
+                       </div> 
+                        <button className="comments__form--button"><img src={CommentLogo} className="comments__form--addcomment"/>Comment<span className="comments__form--empty"></span></button>
                     </form>
                 </div>
                  {comments.map(item => (
@@ -27,7 +29,6 @@ const Comments = (props) => {
                          </div>
                         <p className="comments__wrap--comment">{item.comment}</p>
                      </div>
-                     
                 </div>      
                  ))}
                                            

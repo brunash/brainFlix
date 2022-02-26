@@ -3,21 +3,90 @@
 
 .comments {
     margin: 1rem;
-    
+    @include tablet {   
+        margin: 1rem 2rem 1rem 2rem;
+    }
+    &__count {
+        font-weight: bold;
+    }
     &__form {
         border-bottom: 2px solid $mercury;
         display: flex;
         justify-content: space-between;
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+        }
+        &--input-wrap-big {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            width: 70%;
+        }
+        }
         &--logo {
             height: 2.5em;
             width: 3rem;
             border-radius: 50%;
+            margin-top: 1.8rem;
+            
+        }
+        &--label {
+            color: $silver;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
         }
         &--wrap {
             display: flex;
             flex-direction: column;
+            width: 80%;
+            margin-bottom: 1rem;
+            @include tablet {
+                flex-direction: row;
+                align-items: center;
+                width: 90%;
+                
+            }
         }
+        &--input {
+            resize: none;
+            border-radius: 4px;
+            border: 1px solid #E1E1E1;
+            font-family: "avenir";
+            background-color: #FAFAFA;
+            width: 95%;
+            height: 5rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            @include tablet {
+                width: 90%;
+                height: 1.25rem;
+            }
+        }
+        &--button {
+            background-color: $brainflix-blue;
+            color: white;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 40px;
+            border: none;
+            font-family: "avenir";
+            font-size: 1rem;
+            width: 100%;
+            @include tablet {
+            width: 35%;
+            margin-top: 0.8rem;
+            }
     }
+        
+        
+    }
+
+
+
 
     &__wrap {
         display: flex;
@@ -45,14 +114,19 @@
         }
         &--comment {
             font-weight: 400;
+            margin: 0 0 1rem 0;
         }
         &--name {
             font-weight: 600;
         }
+        
     }
     
 }
 
-// .comments__form {
-//     border-bottom: 2px solid $mercury;
+
+
+// .comments__form--input-wrap-big {
+//     display: flex;
+//     flex-direction: column;
 // }
