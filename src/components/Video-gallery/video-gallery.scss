@@ -1,7 +1,17 @@
 @use '../../styles/partials/mixins'as *;
 @use '../../styles/partials/variables'as *;
 
-.video-header {
+.video-next {
+    width: 100%;
+    @include tablet {
+        width: 60%;
+    }
+    @include desktop {
+        width: 100%;
+    }
+}
+
+.video-next__header {
     color: $silver;
     font-size: 0.9rem;
     margin: 1rem;
@@ -13,9 +23,9 @@
         margin-left: 3rem;
     }
 }
-.video-list {
+.video-next__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 1rem;
     @include tablet {
@@ -24,25 +34,25 @@
     @include desktop {
         margin: 1rem 3rem 1rem 3rem;
     }
-    &__thumbnail {
-        width: 15rem;
+    &--thumbnail {
+        width: 35%;
         height: 7rem; 
         border-radius: 4px;
         background-color: $mercury;
     }
-    &__aside {
+    &--aside {
         padding-left: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 55%;
+        width: 60%;
         height: 7rem;
-        &--title {
+        &-title {
             margin: 0.4rem 0 0.4rem 0;
             font-weight: 600;
             font-size: 1.2rem;
         }
-        &--author {
+        &-author {
             margin: 0.4rem 0 0.4rem 0;
             font-weight: 400;
             font-size: 1.1rem;

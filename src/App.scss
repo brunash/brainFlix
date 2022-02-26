@@ -16,3 +16,19 @@ hr {
             margin: 0 3rem 0 3rem;
         }
 }
+.main {
+    &__right {
+        @include desktop {
+            width: 35%;
+            border-left: 2px solid $mercury;
+        }
+    }
+    &__left {
+        @include desktop {
+            width: 65%;
+        }
+    }
+    @include desktop {
+        display: flex;
+    }
+}

@@ -36,10 +36,15 @@ render () {
     <div>
       <Header />
       <Video chosenVideo={this.state.chosenVideo}/>
-      <Description chosenVideo={this.state.chosenVideo}/>
-      <Comments chosenVideo={this.state.chosenVideo}/>
-      <VideoGallery VideoDetails={this.state.videoSuggest} showNextVideo={this.showNextVideo}
-      />
+      <section className='main'>
+        <section className='main__left'>
+          <Description chosenVideo={this.state.chosenVideo}/>
+          <Comments chosenVideo={this.state.chosenVideo}/>
+        </section>
+        <section className='main__right'>  
+          <VideoGallery VideoDetails={this.state.videoSuggest} showNextVideo={this.showNextVideo}/>
+        </section>
+      </section>
     </div>
   );}
 }
