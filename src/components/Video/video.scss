@@ -7,41 +7,11 @@
         width: 100%;
         height: 17rem;
         background-color: $brainflix-darkblack;
-    }
-    &__title {
-        margin: 1rem;
-    }
-    &__info {
-        margin: 1rem;
-        display: flex;
-        justify-content: space-between;
-        &--views {
-            width: 8rem;
-            color: $mercury;
-            font-weight: 500;
-            font-size: 1.2rem;
+        @include tablet {
+            height: 22rem;
         }
-        &--likes {
-            width: 8rem;
-            color: $mercury;
-            font-weight: 500;
-            font-size: 1.2rem;
+        @include desktop {
+            height: 27rem;
         }
-        &--logo {
-            margin-right: 1rem;
-        }
-        &--right {
-            margin-right: 3rem;
-        }
-    &--date {
-            color: $mercury;
-            font-weight: 500;
-            font-size: 1.2rem;
-            }
     }
-    &__description {
-        margin: 1.2rem;
-        font-weight: 500;
-
-    }
-}
+  }
