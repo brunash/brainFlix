@@ -4,11 +4,9 @@ import viewsLogo from '../../assets/images/views.svg'
 import likesLogo from '../../assets/images/likes.svg'
 
 const Description = (props) => {
-
       const { title, channel, timestamp, views, likes, description } =
       props.chosenVideo;
       let date = new Date(timestamp).toLocaleDateString();
-    
     return (
         <div className="description">
            <h1 className="description__title">{title}</h1>
@@ -25,11 +23,6 @@ const Description = (props) => {
                         </div>
                         <hr></hr>
                         <p className="description__story">{description}</p>
-                        
-                        <div>
-
-
-                        </div>
         </div>
     )
 }

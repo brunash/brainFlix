@@ -6,7 +6,6 @@ import CommentLogo from '../../assets/images/add_comment.svg'
 
 const Comments = (props) => {
      const {comments} = props.chosenVideo;
-
      const dateComment =(date) => {
          return new Date(date).toLocaleDateString();}
 
@@ -36,10 +35,8 @@ const Comments = (props) => {
                      </div>
                 </div>      
                  ))}
-                                           
 </div>
     )
 }
-
 
 export default Comments

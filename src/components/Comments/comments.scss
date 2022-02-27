@@ -30,7 +30,6 @@
         &--logo {
             @include avatar;
             margin-top: 1.8rem;
-            
         }
         &--label {
             color: $silver;
@@ -69,7 +68,6 @@
             }
         }
     }
-
     &__wrap {
         display: flex;
         flex-direction: row;

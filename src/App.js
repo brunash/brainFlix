@@ -10,14 +10,11 @@ import Comments from './components/Comments/comments';
 
 const videoList = [...sideVideos];
 videoList.shift();
-
 class App extends Component {
-
     state = {
       videoSuggest: videoList,
       chosenVideo: VideoDetails[0],
     };
-
     showNextVideo = (id) => {
       const videoHero = VideoDetails.filter((video) => video.id === id);
       const chosenVideo = videoHero[0];
@@ -27,7 +24,6 @@ class App extends Component {
         chosenVideo: chosenVideo,
       });
     };
-
 
 render () {
   return (

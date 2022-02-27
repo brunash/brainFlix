@@ -3,9 +3,7 @@ import './video.scss';
 
 
 const Video = (props) => {
-
     const{image} = props.chosenVideo;
-
     return (
         <div className="video">
                 <div >
@@ -13,7 +11,6 @@ const Video = (props) => {
                 </div> 
         </div>              
     ) 
-    
 }
 
 export default Video

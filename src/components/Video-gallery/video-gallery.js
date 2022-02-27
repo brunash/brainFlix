@@ -2,13 +2,12 @@ import React from "react";
 import "../../App.scss";
 import "./video-gallery.scss"
 
-
 const VideoGallery = (props) => {
     const videos = props.VideoDetails;
     return (
         <div className="video-next">
             <h5 className="video-next__header">NEXT VIDEOS</h5>
-        {videos.map(item => (
+            {videos.map(item => (
                 <div key={item.id} className="video-next__list" onClick={() => props.showNextVideo(item.id)}>
                         <img src={item.image} className="video-next__list--thumbnail"/>
                     <aside className="video-next__list--aside">
