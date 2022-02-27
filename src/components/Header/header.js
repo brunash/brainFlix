@@ -12,14 +12,14 @@ const Header = () => {
             <img src={BrainFlixLogo} className="header__logo"/>
             <div className="header__search">
                 <div className="header__search--input-container">
-                    <img src={Magnifier} className="header__search--magnifier"/>
+                    <img alt="Write something to search" src={Magnifier} className="header__search--magnifier"/>
                     <input type="search" className="header__search--input" placeholder='Search'></input>
                 </div>
-                <img src={Avatar} className="header__search--avatar"/>
+                <img alt="Mohan Muruge avatar" src={Avatar} className="header__search--avatar"/>
             </div>
             <div className="header__avatar-button-big">    
                 <button className="header__button"><img className="header__button--arrow" src={UploadButton}/>UPLOAD<div className="header__button--blank-div"></div></button>
-                <img src={Avatar} className="header__search--avatar-big"/>
+                <img alt="Mohan Muruge avatar" src={Avatar} className="header__search--avatar-big"/>
             </div>
         </header>
     )

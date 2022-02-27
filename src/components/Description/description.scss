@@ -4,12 +4,13 @@
 .description {
     
     @include desktop {
-        margin: 1rem 3rem 1rem 1rem;
+        margin: 1rem 0rem 1rem 1rem;
     }
     &__title {
         margin: 1rem;
         @include tablet {
             margin: 1rem 2rem 0 2rem;
+            font-size: 2.2rem;
         }
     }
     &__break-small {
@@ -27,15 +28,11 @@
         }
         &--views {
             width: 8rem;
-            color: $mercury;
-            font-weight: 500;
-            font-size: 1.2rem;
+            @include date-like-views;
         }
         &--likes {
             width: 8rem;
-            color: $mercury;
-            font-weight: 500;
-            font-size: 1.2rem;
+            @include date-like-views;
         }
         &--logo {
             margin-right: 1rem;
@@ -59,13 +56,11 @@
         }
         }
     &--date {
-            color: $mercury;
-            font-weight: 500;
-            font-size: 1.2rem;
-            }
+        @include date-like-views;
+        }
     }
-    &__description {
-        margin: 1.2rem;
+    &__story {
+        margin: 1.5rem;
         font-weight: 500;
         @include tablet {
             margin: 1rem 2rem 1rem 2rem;

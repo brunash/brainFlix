@@ -21,9 +21,7 @@ class App extends Component {
     showNextVideo = (id) => {
       const videoHero = VideoDetails.filter((video) => video.id === id);
       const chosenVideo = videoHero[0];
-
       const videoList = sideVideos.filter((video) => video.id !== id);
-
       this.setState({
         videoSuggest: videoList,
         chosenVideo: chosenVideo,

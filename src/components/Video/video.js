@@ -9,9 +9,7 @@ const Video = (props) => {
     return (
         <div className="video">
                 <div >
-                        <video poster={image} controls className="video__hero">
-                            <source src=""/>
-                        </video>
+                        <video poster={image} controls className="video__hero"></video>
                 </div> 
         </div>              
     ) 

@@ -1,13 +1,10 @@
 import React from "react";
-import VideoGalleryData from "../../data/videos.json";
 import "../../App.scss";
 import "./video-gallery.scss"
 
 
 const VideoGallery = (props) => {
     const videos = props.VideoDetails;
-    // const show = props.showNextVideo;
-
     return (
         <div className="video-next">
             <h5 className="video-next__header">NEXT VIDEOS</h5>
