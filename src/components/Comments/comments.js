@@ -5,7 +5,11 @@ import CommentLogo from '../../assets/images/add_comment.svg'
 
 const Comments = (props) => {
      const {comments} = props.chosenVideo;
-     console.log(comments)
+
+     const dateComment =(date) => {
+         return new Date(date).toLocaleDateString();}
+
+     console.log(comments.timestamp)
      return (
         <div className="comments">
                 <p className="comments__count">{comments.length} Comments</p>
@@ -19,20 +23,20 @@ const Comments = (props) => {
                         <button className="comments__form--button"><img src={CommentLogo} className="comments__form--addcomment"/>Comment<span className="comments__form--empty"></span></button>
                     </form>
                 </div>
-                 {comments.map(item => (
+                {comments.map(item => (
                 <div className="comments__wrap">
                     <div className = "comments__wrap--circle"></div>
                     <div className="comments__wrap--right">
                         <div className="comments__wrap--top">
                             <p className="comments__wrap--name">{item.name}</p>
-                            <p className="comments__wrap--date">{item.timestamp}</p>
+                            <p className="comments__wrap--date">{dateComment(item.timestamp)}</p>
                          </div>
                         <p className="comments__wrap--comment">{item.comment}</p>
                      </div>
                 </div>      
                  ))}
                                            
-        </div>
+</div>
     )
 }
 

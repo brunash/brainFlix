@@ -6,6 +6,9 @@
     @include tablet {   
         margin: 1rem 2rem 1rem 2rem;
     }
+    @include desktop {
+        margin: 1rem 3rem 1rem 3rem;
+    }
     &__count {
         font-weight: bold;
     }

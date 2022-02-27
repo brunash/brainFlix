@@ -7,6 +7,7 @@ const Description = (props) => {
 
       const { id, title, channel, timestamp, views, likes, description } =
       props.chosenVideo;
+      let date = new Date(timestamp).toLocaleDateString();
     
     return (
         <div className="description">
@@ -15,7 +16,7 @@ const Description = (props) => {
                         <div className="description__info">   
                             <div className="description__info--left">
                                 <h3 className="description__info--channel">By {channel}</h3>
-                                <p className="description__info--date">{timestamp}</p>
+                                <p className="description__info--date">{date}</p>
                             </div>
                             <div className="description__info--right">
                                 <p className="description__info--views"><img src={viewsLogo} className="description__info--logo"/>{views}</p>
