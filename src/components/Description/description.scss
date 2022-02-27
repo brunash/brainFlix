@@ -1,0 +1,72 @@
+@use '../../styles/partials/mixins'as *;
+@use '../../styles/partials/variables'as *;
+
+.description {
+    
+    @include desktop {
+        margin: 1rem 0rem 1rem 1rem;
+    }
+    &__title {
+        margin: 1rem;
+        @include tablet {
+            margin: 1rem 2rem 0 2rem;
+            font-size: 2.2rem;
+        }
+    }
+    &__break-small {
+        @include tablet {
+            display: none;
+        }
+    }
+    &__info {
+        margin: 0 1rem 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        @include tablet {
+            flex-direction: row;
+            margin: 0 2rem 0 2rem;
+        }
+        &--views {
+            width: 8rem;
+            @include date-like-views;
+        }
+        &--likes {
+            width: 8rem;
+            @include date-like-views;
+        }
+        &--logo {
+            margin-right: 1rem;
+        }
+        &--left {
+            @include tablet {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 18rem;
+        }
+        }
+        &--right {
+            margin-right: 3rem;
+            @include tablet {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 18rem;
+                margin: 0;
+        }
+        }
+    &--date {
+        @include date-like-views;
+        }
+    }
+    &__story {
+        margin: 1.5rem;
+        font-weight: 500;
+        @include tablet {
+            margin: 1rem 2rem 1rem 2rem;
+        }
+
+    }
+        
+}
+        
