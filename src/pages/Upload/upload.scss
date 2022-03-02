@@ -1,0 +1,66 @@
+@use '../../styles/partials/variables'as *;
+@use '../../styles/partials/mixins'as *;
+
+.top-border {
+    margin: 0;
+}
+
+.upload {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    &__title {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    &__hero {
+        &--img {
+            width: 100%;
+            border-radius: 4px;
+        }
+        &--title {
+            @include date-like-views;
+            margin-bottom: 0.5rem;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        &--label {
+        @include date-like-views;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        }
+        &--input {
+            @include input;
+            height: 2.5rem;
+            padding-left: 1rem;
+        }
+        &--textarea {
+            @include input;
+            height: 5rem;
+            padding: 1rem;
+            resize: none;
+        }
+        &--button {
+            display: flex;
+            flex-direction: column;
+            &--publish {
+                @include button;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1.5rem;
+            }
+            &--cancel {
+                @include button;
+                background-color: $white;
+                color: $brainflix-blue;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+
+}
