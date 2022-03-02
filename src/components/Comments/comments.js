@@ -20,7 +20,7 @@ const Comments = (props) => {
                         <label className="comments__form--label" for="input">JOIN THE CONVERSATION</label>
                         <textarea placeholder="Add a new comment" className="comments__form--input" name="input"></textarea>
                        </div> 
-                        <button className="comments__form--button"><img alt="Add Comment Button" src={CommentLogo} className="comments__form--addcomment"/>Comment<span className="comments__form--empty"></span></button>
+                        <button className="comments__form--button"><img alt="Add Comment Button" src={CommentLogo} className="comments__form--addcomment"/>COMMENT<span className="comments__form--empty"></span></button>
                     </form>
                 </div>
                 {comments.map(item => (
