@@ -5,9 +5,7 @@ import UploadButton from "../../assets/images/upload.svg"
 import Magnifier from "../../assets/images/search.svg"
 import "./header.scss"
 import "../../App.scss"
-import { BrowserRouter, Switch, Link, Route } from "react-router-dom/cjs/react-router-dom.min";
-import Upload from "../../pages/Upload/upload";
-
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Header = ({match}) => {
     return (
@@ -26,8 +24,6 @@ const Header = ({match}) => {
                 <img alt="Mohan Muruge avatar" src={Avatar} className="header__search--avatar-big"/>
             </div>
         </header>
-        
     )
 }
-
 export default Header

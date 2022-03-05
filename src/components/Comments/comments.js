@@ -10,11 +10,8 @@ const Comments = (props) => {
 
      const dateComment =(date) => {
          return new Date(date).toLocaleDateString();}
-
-
-     return (
+    return (
         <div className="comments">
-                {/* <p className="comments__count">{comments.length} Comments</p> */}
                 <div className="comments__form">
                     <img alt="Mohan Muruge avatar" src={Mohan} className="comments__form--logo"></img>
                     <form className="comments__form--wrap">

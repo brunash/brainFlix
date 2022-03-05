@@ -1,4 +1,3 @@
-// import Header from '../../components/Header/header';
 import "../../App.scss"
 import "./upload.scss"
 import Thumbnail from "../../assets/images/Upload-video-preview.jpg"

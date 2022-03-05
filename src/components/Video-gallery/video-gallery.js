@@ -2,33 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../App.scss";
 import "./video-gallery.scss"
-import axios from "axios";
-import { apiKey } from "../Utilities/utils";
-import { apiUrl } from "../Utilities/utils";
 
 const VideoGallery = (props) => {
     const videos = props.VideoDetails;
-    const getVideoById = props.getVideoById
-    const chosenVideo = props.chosenVideo
-    // function VideoGallery({ videoSuggest, chosenVideo }) {
-console.log(chosenVideo, "chosen")
-    
-//     return (
-//         <div className="video-next">
-//             <h5 className="video-next__header">NEXT VIDEOS</h5>
-//             {videoSuggest.map(item => (
-//                 <div key={item.id} className="video-next__list" onClick={() => videoSuggest.showNextVideo(item.id)}>
-//                         <img src={item.image} className="video-next__list--thumbnail"/>
-//                     <aside className="video-next__list--aside">
-//                         <h3 className="video-next__list--aside-title">{item.title}</h3>
-//                         <h4 className="video-next__list--aside-author">{item.channel}</h4>
-//                     </aside>
-//                 </div>    
-//     ))}
-//         </div>
-//     )
-// }
-
+    const getVideoById = props.getVideoById;
+    const chosenVideo = props.chosenVideo; 
         return (
                         <div className="video-next">
                             <h5 className="video-next__header">NEXT VIDEOS</h5>
@@ -38,9 +16,7 @@ console.log(chosenVideo, "chosen")
                                     < Link to = {
                                         `/home/${item.id}`
                                     } >
-                                <div key={item.id} className="video-next__list"
-                                //  onClick={() => videoSuggest.showNextVideo(item.id)}
-                                 >
+                                <div key={item.id} className="video-next__list">
                                         <img src={item.image} className="video-next__list--thumbnail"/>
                                     <aside className="video-next__list--aside">
                                         <h3 className="video-next__list--aside-title">{item.title}</h3>
@@ -50,11 +26,9 @@ console.log(chosenVideo, "chosen")
                                 </Link>
                                 )
                             }) 
-                                    
-                    
-    }                  
-     </div>
+                            }                  
+                        </div>
                         )
-                }
+    }
     
 export default VideoGallery

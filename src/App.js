@@ -16,7 +16,6 @@ render () {
         <Route path='/' exact component={HomePage}/>
         <Route path='/upload' exact component={UploadPage}/>
         <Route path='/home/:id' component={HomePage}></Route>
-        
       </Switch>
       </BrowserRouter>
     </div>
