@@ -57,8 +57,7 @@ this.setState({
     redirect() {
         this.props.history.push("/");
     }
-
-
+    
   render() {
     return (
         <>  

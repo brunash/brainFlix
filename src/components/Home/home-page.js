@@ -6,7 +6,6 @@ import { Component } from "react";
 import axios from 'axios';
 import { apiKey, apiUrl } from '../Utilities/utils';
 
-
 class HomePage extends Component {
     state = {
         videoSuggest: [],
