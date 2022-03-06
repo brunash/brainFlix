@@ -5,12 +5,12 @@ import CommentLogo from '../../assets/images/add_comment.svg'
 
 
 const Comments = (props) => {
-      const chosenVideo = props.chosenVideo;
-     console.log(chosenVideo.comments, "comments")
+    const chosenVideo = props.chosenVideo;
 
-     const dateComment =(date) => {
+    const dateComment =(date) => {
          return new Date(date).toLocaleDateString();}
-    return (
+     
+         return (
         <div className="comments">
                 <div className="comments__form">
                     <img alt="Mohan Muruge avatar" src={Mohan} className="comments__form--logo"></img>
