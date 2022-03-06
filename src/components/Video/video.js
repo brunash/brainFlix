@@ -1,13 +1,14 @@
 import React from "react";
 import './video.scss';
 
-
 const Video = (props) => {
-    const{image} = props.chosenVideo;
+
+    const chosenVideo = props.chosenVideo;
+
     return (
         <div className="video">
                 <div >
-                        <video poster={image} controls className="video__hero"></video>
+                        <video poster={chosenVideo.image} controls className="video__hero"></video>
                 </div> 
         </div>              
     ) 
