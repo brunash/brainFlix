@@ -4,7 +4,7 @@ import Comments from '../Comments/comments';
 import VideoGallery from '../Video-gallery/video-gallery';
 import { Component } from "react";
 import axios from 'axios';
-import { apiKey, apiUrl } from '../Utilities/utils';
+// import { apiKey, apiUrl } from '../Utilities/utils';
 
 class HomePage extends Component {
     state = {
@@ -13,22 +13,24 @@ class HomePage extends Component {
     };
     getVideoById = (id) => {
       axios
-      .get(`${apiUrl}/videos/${id}?api_key=${apiKey}`)
+      // .get(`${apiUrl}/videos/${id}?api_key=${apiKey}`)
+      .get('http://localhost:5500/videos/')
         .then(response => {
           this.setState({
-            chosenVideo: response.data
+            chosenVideo: response.data,
+            videoSuggest: response.data
               })
             })
             .catch(err => console.log(err))
-        }
+    }
     componentDidMount() {
       axios
-      .get(`${apiUrl}/videos/?api_key=${apiKey}`)
+      // .get(`${apiUrl}/videos/?api_key=${apiKey}`)
+      .get('http://localhost:5500/videos')
         .then(response => {
           this.setState({
             videoSuggest: response.data
           })
-
           const videoId = this.props.match.params.videoId || response.data[0].id
           this.getVideoById(videoId);
         })
