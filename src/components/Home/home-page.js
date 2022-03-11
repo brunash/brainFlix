@@ -12,13 +12,14 @@ class HomePage extends Component {
         chosenVideo: {}
     };
     getVideoById = (id) => {
+         console.log(id)
       axios
       // .get(`${apiUrl}/videos/${id}?api_key=${apiKey}`)
-      .get('http://localhost:5500/videos/')
+      .get(`http://localhost:5500/videos/${id}`)
         .then(response => {
+          console.log(response)
           this.setState({
-            chosenVideo: response.data,
-            videoSuggest: response.data
+            chosenVideo: response.data
               })
             })
             .catch(err => console.log(err))
@@ -26,12 +27,14 @@ class HomePage extends Component {
     componentDidMount() {
       axios
       // .get(`${apiUrl}/videos/?api_key=${apiKey}`)
-      .get('http://localhost:5500/videos')
+      .get('http://localhost:5500/videos/')
         .then(response => {
           this.setState({
             videoSuggest: response.data
           })
           const videoId = this.props.match.params.videoId || response.data[0].id
+       
+
           this.getVideoById(videoId);
         })
         .catch(err => console.log(err))
