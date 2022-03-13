@@ -29,6 +29,7 @@ class HomePage extends Component {
       // .get(`${apiUrl}/videos/?api_key=${apiKey}`)
       .get('http://localhost:5500/videos/')
         .then(response => {
+          console.log(response)
           this.setState({
             videoSuggest: response.data
           })

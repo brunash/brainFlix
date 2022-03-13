@@ -1,9 +1,12 @@
 import "../../App.scss"
 import "./upload.scss"
 import Thumbnail from "../../assets/images/Upload-video-preview.jpg"
+import apiUrl from "../../components/Utilities/utils"
 import PublishLogo from "../../assets/images/publish.svg"
 import { Component } from "react"
 import { withRouter } from "react-router-dom";
+import axios from "axios";
+import HomePage from "../../components/Home/home-page"
 
     
 class UploadPage extends Component {
@@ -44,8 +47,16 @@ this.setState({
       return true;
     }
   };
+
   handleSubmit = (event) => {
     event.preventDefault();
+
+    axios
+    .post('http://localhost:5500/videos', {
+        title: event.target.title.value,
+        description: event.target.description.value
+    }).then(this.handleSubmit);
+
     if (this.isFormValid()) {
       alert("Upload Successful!");
       this.redirect();
