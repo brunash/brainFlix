@@ -115,9 +115,15 @@
                 justify-content: space-between;
                 margin-top: 1rem;
                 @include tablet {
-                    width: 25%;
+                    width: 100%;
                     align-content: center;
                     margin-top: 1.5rem;
+                }
+            }
+            &--link {
+                cursor: default;
+                @include tablet {
+                   width: 20%;
                 }
             }
         }

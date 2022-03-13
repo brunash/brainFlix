@@ -4,7 +4,7 @@ import './video.scss';
 const Video = (props) => {
 
     const chosenVideo = props.chosenVideo;
-
+    
     return (
         <div className="video">
                 <div >

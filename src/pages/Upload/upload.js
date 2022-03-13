@@ -4,14 +4,15 @@ import Thumbnail from "../../assets/images/Upload-video-preview.jpg"
 import PublishLogo from "../../assets/images/publish.svg"
 import { Component } from "react"
 import { withRouter } from "react-router-dom";
-
+import axios from "axios";
+import { Link } from "react-router-dom"
     
 class UploadPage extends Component {
     state = {
         title: "",
         description: "",
         };
-       
+      
 handleChange = (event) => {
 this.setState({
      [event.target.name]: event.target.value,
@@ -44,8 +45,16 @@ this.setState({
       return true;
     }
   };
+
   handleSubmit = (event) => {
     event.preventDefault();
+
+    axios
+    .post('http://localhost:5500/videos', {
+        title: event.target.title.value,
+        description: event.target.description.value
+    }).then(this.handleSubmit);
+
     if (this.isFormValid()) {
       alert("Upload Successful!");
       this.redirect();
@@ -57,6 +66,7 @@ this.setState({
     redirect() {
         this.props.history.push("/");
     }
+    
     
   render() {
     return (
@@ -99,7 +109,7 @@ this.setState({
                     <hr className="upload__border"></hr>
                     <div className='upload__form--button'>
                         <button type="submit" className='upload__form--button--publish' ><img src={PublishLogo}/>PUBLISH<div></div></button>
-                        <button className='upload__form--button--cancel'><img src={PublishLogo}/>CANCEL<div></div></button>
+                        <Link className='upload__form--button--link' to='/'><button className='upload__form--button--cancel' type="reset" ><img src={PublishLogo}/>CANCEL<div></div></button></Link>
                     </div> 
                 </form>
 
