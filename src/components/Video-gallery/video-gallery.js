@@ -13,10 +13,10 @@ const VideoGallery = (props) => {
                             {videos?.filter(item => item.id !== chosenVideo.id)
                             .map( item => {
                                 return (
-                                    < Link to = {
+                                    < Link key={item.id} to = {
                                         `/home/${item.id}`
                                     } >
-                                <div key={item.id} className="video-next__list">
+                                <div  className="video-next__list">
                                         <img src={item.image} className="video-next__list--thumbnail"/>
                                     <aside className="video-next__list--aside">
                                         <h3 className="video-next__list--aside-title">{item.title}</h3>

@@ -21,7 +21,7 @@ class HomePage extends Component {
             .catch(err => console.log(err))
     }
     componentDidMount() {
-      document.title = 'BrainFlix Home Page'
+      document.title = 'BrainFlix'
       axios
       .get('http://localhost:5500/videos/')
         .then(response => {  

@@ -16,7 +16,7 @@ const Comments = (props) => {
                     <img alt="Mohan Muruge avatar" src={Mohan} className="comments__form--logo"></img>
                     <form className="comments__form--wrap">
                        <div className="comments__form--input-wrap-big">
-                        <label className="comments__form--label" for="input">JOIN THE CONVERSATION</label>
+                        <label className="comments__form--label" htmlFor="input">JOIN THE CONVERSATION</label>
                         <textarea placeholder="Add a new comment" className="comments__form--input" name="input"></textarea>
                        </div> 
                         <button className="comments__form--button"><img alt="Add Comment Button" src={CommentLogo} className="comments__form--addcomment"/>COMMENT<span className="comments__form--empty"></span></button>

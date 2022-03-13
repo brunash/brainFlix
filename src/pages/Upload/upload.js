@@ -86,7 +86,7 @@ this.setState({
                             <img className='upload__hero--img' src={Thumbnail}/>
                         </div>
                         <div className="upload__form--input-desktop">
-                            <label className='upload__form--label' for="title"  >TITLE YOUR VIDEO</label>
+                            <label className='upload__form--label' htmlFor="title"  >TITLE YOUR VIDEO</label>
                             <input 
                             type="text" 
                             className='upload__form--input' 
@@ -95,7 +95,7 @@ this.setState({
                             onChange={this.handleChange}
                             value={this.state.title}
                             ></input>
-                            <label className='upload__form--label' for="description">ADD A VIDEO DESCRIPTION</label>
+                            <label className='upload__form--label' htmlFor="description">ADD A VIDEO DESCRIPTION</label>
                             <textarea 
                             type="text" 
                             className='upload__form--textarea' 
