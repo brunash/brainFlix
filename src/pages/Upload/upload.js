@@ -1,20 +1,18 @@
 import "../../App.scss"
 import "./upload.scss"
 import Thumbnail from "../../assets/images/Upload-video-preview.jpg"
-import apiUrl from "../../components/Utilities/utils"
 import PublishLogo from "../../assets/images/publish.svg"
 import { Component } from "react"
 import { withRouter } from "react-router-dom";
 import axios from "axios";
-import HomePage from "../../components/Home/home-page"
-
+import { Link } from "react-router-dom"
     
 class UploadPage extends Component {
     state = {
         title: "",
         description: "",
         };
-       
+      
 handleChange = (event) => {
 this.setState({
      [event.target.name]: event.target.value,
@@ -69,6 +67,7 @@ this.setState({
         this.props.history.push("/");
     }
     
+    
   render() {
     return (
         <>  
@@ -110,7 +109,7 @@ this.setState({
                     <hr className="upload__border"></hr>
                     <div className='upload__form--button'>
                         <button type="submit" className='upload__form--button--publish' ><img src={PublishLogo}/>PUBLISH<div></div></button>
-                        <button className='upload__form--button--cancel'><img src={PublishLogo}/>CANCEL<div></div></button>
+                        <Link className='upload__form--button--link' to='/'><button className='upload__form--button--cancel' type="reset" ><img src={PublishLogo}/>CANCEL<div></div></button></Link>
                     </div> 
                 </form>
 

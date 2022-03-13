@@ -23,7 +23,7 @@ const Comments = (props) => {
                     </form>
                 </div>
                 {chosenVideo.comments?.map(comments => (
-                <div className="comments__wrap" key={comments.id}>
+                <div className="comments__wrap" key={comments.timestamp}>
                     <div className = "comments__wrap--circle"></div>
                     <div className="comments__wrap--right">
                         <div className="comments__wrap--top">

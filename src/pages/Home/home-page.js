@@ -1,10 +1,9 @@
-import Video from '../Video/video';
-import Description from '../Description/description';
-import Comments from '../Comments/comments';
-import VideoGallery from '../Video-gallery/video-gallery';
+import Video from '../../components/Video/video';
+import Description from '../../components/Description/description';
+import Comments from '../../components/Comments/comments';
+import VideoGallery from '../../components/Video-gallery/video-gallery';
 import { Component } from "react";
 import axios from 'axios';
-// import { apiKey, apiUrl } from '../Utilities/utils';
 
 class HomePage extends Component {
     state = {
@@ -12,12 +11,9 @@ class HomePage extends Component {
         chosenVideo: {}
     };
     getVideoById = (id) => {
-         console.log(id)
       axios
-      // .get(`${apiUrl}/videos/${id}?api_key=${apiKey}`)
       .get(`http://localhost:5500/videos/${id}`)
-        .then(response => {
-          console.log(response)
+        .then(response => {   
           this.setState({
             chosenVideo: response.data
               })
@@ -25,11 +21,10 @@ class HomePage extends Component {
             .catch(err => console.log(err))
     }
     componentDidMount() {
+      document.title = 'BrainFlix Home Page'
       axios
-      // .get(`${apiUrl}/videos/?api_key=${apiKey}`)
       .get('http://localhost:5500/videos/')
-        .then(response => {
-          console.log(response)
+        .then(response => {  
           this.setState({
             videoSuggest: response.data
           })
